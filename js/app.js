@@ -1,12 +1,12 @@
 var myApp = angular.module('app', ['ui.router']);
 
-myApp.config(function ($stateProvider) {
+myApp.config(function ($stateProvider,  $locationProvider) {
   $stateProvider
     .state(
       {
         name: 'home',
-        url: '/home',
-        templateUrl: 'views/about.html'
+        url: '/',
+        templateUrl: 'views/home.html'
       }
     )
     .state(
@@ -20,14 +20,16 @@ myApp.config(function ($stateProvider) {
       {
         name: 'blog',
         url: '/blog',
-        template: 'views/blog.html'
+        templateUrl: 'views/blog.html'
       }
     )
     .state(
       {
         name: 'contact',
         url: '/contact',
-        template: 'views/contact.html'
+        templateUrl: 'views/contact.html'
       }
     );
+
+    $locationProvider.html5Mode(true);
 });
