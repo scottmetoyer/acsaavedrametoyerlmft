@@ -183,7 +183,7 @@
 		}
 
 		/* 6. Preloader */
-		$(window).load( function () {
+		$(window).on('load', function () {
 			$('.preloader').addClass('kd-hidden');
 		});
 	});
