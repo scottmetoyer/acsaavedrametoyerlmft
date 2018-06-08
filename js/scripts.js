@@ -84,24 +84,7 @@
 		});
 
 		/* 3. Featured Slider */
-		var $featuredSlider = $('.featured-slider'),
-			options = $.extend({
-				items     : 3,
-				nav       : true,
-				navText   : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-				responsive: {
-					0  : {
-						items: 1
-					},
-					768: {
-						items: 2
-					},
-					992: {
-						items: 3
-					}
-				}
-			}, $featuredSlider.data());
-		$featuredSlider.owlCarousel(options);
+		// Moved to inside the Angular controller
 
 		/* 4. Footer Instagram */
 		var $footer = $('#footer'),
@@ -171,6 +154,7 @@
 			});
 		}
 
+		/*
 		if ($slideShow.length) {
 			$slideShow.owlCarousel({
 				items     : 1,
@@ -181,6 +165,7 @@
 				navText   : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
 			});
 		}
+	*/
 
 		/* 6. Preloader */
 		$(window).on('load', function () {

@@ -1,34 +1,31 @@
-
-
-<!-- Promos Box -->
-<div class="container">
-	<div id="promos-box" class="promos-box">
-		<div class="row">
-			<div class="col-md-4 col-xs-12">
-				<div class="promo-box image" style="background-image: url(images/promo-box/1.jpg); ">
-					<div class="promo-inner">
-						<h2><a href="#">Intersectional</a></h2>
-					</div>
-				</div>
+<!-- Featured Slider -->
+<div id="featured-slider" class="featured-slider owl-carousel text-center">
+	<div class="item image" style="background-image: url(images/featured-sliders/intersectional.jpg);">
+		<div class="item-inner">
+			<div class="cat">
+				<a href="#">Intersectional</a>
 			</div>
-			<div class="col-md-4 col-xs-12">
-				<div class="promo-box image" style="background-image: url(images/promo-box/2.jpg); ">
-					<div class="promo-inner">
-						<h2><a href="#">Genuine</a></h2>
-					</div>
-				</div>
+			<h2><a href="single.html">Conditions of service in this restaurant are good</a></h2>
+		</div>
+	</div>
+	<div class="item image" style="background-image: url(images/featured-sliders/genuine.jpg);">
+		<div class="item-inner">
+			<div class="cat">
+				<a href="#">Genuine</a>
 			</div>
-			<div class="col-md-4 col-xs-12">
-				<div class="promo-box image" style="background-image: url(images/promo-box/3.jpg); ">
-					<div class="promo-inner">
-						<h2><a href="#">Skilled</a></h2>
-					</div>
-				</div>
+			<h2><a href="single.html">I make it a rule to get up early every morning</a></h2>
+		</div>
+	</div>
+	<div class="item image" style="background-image: url(images/featured-sliders/skilled.jpg);">
+		<div class="item-inner">
+			<div class="cat">
+				<a href="#">Skilled</a>
 			</div>
+			<h2><a href="single.html">Sitting all alone with only memories of the past</a></h2>
 		</div>
 	</div>
 </div>
-<!-- End Promos Box -->
+<!-- End Featured Slider -->
 
 <!-- Posts -->
 <div id="wrap-posts" class="wrap-posts">
@@ -324,3 +321,26 @@
 	</div>
 </div>
 <!-- End Posts -->
+
+<script>
+	$(document).ready(function () {
+		var $featuredSlider = $('.featured-slider'),
+			options = $.extend({
+				items     : 3,
+				nav       : true,
+				navText   : ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+				responsive: {
+					0  : {
+						items: 1
+					},
+					768: {
+						items: 2
+					},
+					992: {
+						items: 3
+					}
+				}
+			}, $featuredSlider.data());
+		$featuredSlider.owlCarousel(options);
+	});
+</script>
