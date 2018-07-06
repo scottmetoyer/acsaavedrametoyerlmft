@@ -33,3 +33,31 @@ myApp.config(function ($stateProvider,  $locationProvider) {
 
     $locationProvider.html5Mode(true);
 });
+
+// Widget directives
+myApp.directive('latestPosts', function(){
+  return {
+    restrict: 'E',
+    scope: false,
+    templateUrl: 'partials/latest.html',
+    replace: true
+  }
+});
+
+myApp.directive('socialLinks', function(){
+  return {
+    restrict: 'E',
+    scope: false,
+    templateUrl: 'partials/social.html',
+    replace: true
+  }
+});
+
+myApp.directive('aboutMe', function(){
+  return {
+    restrict: 'E',
+    scope: false,
+    templateUrl: 'partials/about.html',
+    replace: true
+  }
+});
